@@ -4,6 +4,10 @@ import logo from '../assets/img/logo.svg';
 import navIcon1 from '../assets/img/nav-icon1.svg';
 import navIcon2 from '../assets/img/nav-icon2.svg';
 import navIcon3 from '../assets/img/nav-icon3.svg';
+import { HashLink } from 'react-router-hash-link';
+import {
+  BrowserRouter as Router
+} from "react-router-dom";
 
 export const NavBar = () => {
   const [activeLink, setActiveLink] = useState('home');
@@ -19,8 +23,8 @@ export const NavBar = () => {
     }
     window.addEventListener("scroll", onScroll);
 
-    return window.removeEventListener("scroll", onScroll);
-  }, []);
+    return () => window.removeEventListener("scroll", onScroll);
+  }, [])
 
   const onUpdateActiveLink = (value) => {
     setActiveLink(value);
@@ -28,12 +32,12 @@ export const NavBar = () => {
 
  
     return(
-        // <Navbar expand="lg" className="bg-body-tertiary">
-      <Navbar expand="lg" className = {scrolled ? "scrolled" : "" }>
+<Router>
+<Navbar expand="lg" className = {scrolled ? "scrolled" : "" }>
       <Container>
         <Navbar.Brand href="#home">
-          {/* margret */}
-        <img src={logo} alt='margret' />
+          <h3 className='name'>Margret</h3>
+        {/* <img src={logo} alt='margret' /> */}
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav">
             <span className='navbar-toggler-icon' > </span>
@@ -46,16 +50,19 @@ export const NavBar = () => {
           </Nav>
           <span className='navbar-text'>
           <div className='social-icon'>
-          <a href='#'><img src={navIcon1} alt=''/></a>
-          <a href='#'><img src={navIcon2} alt=''/></a>
-          <a href='#'><img src={navIcon3} alt=''/></a>
-          </div>
-          <button className='vvd' onClick={() => console.log("connect")}>Let's Connect</button>
+                <a href="https://www.linkedin.com/in/margret-mauno-469b57190/?originalSubdomain=ke"><img src={navIcon1}/></a>
+                <a href="https://www.facebook.com/margret.mauno.3/?paipv=0&eav=AfYCv50qD9WgZJBZ56S1AUebXKsmGxUp4uD4GgsmlxSTKdSZJ9IS0Jl_ShOIB4c-Lmo&_rdr"><img src={navIcon2}/></a>
+                <a href="https://www.instagram.com/magy.cally_me/"><img src={navIcon3}/></a> 
 
+          </div>
+              <HashLink to='#connect'>
+                <button className="vvd"><span>Let’s Connect</span></button>
+              </HashLink>
           </span>
         </Navbar.Collapse>
       </Container>
     </Navbar>
+    </Router>
     )
 }
 

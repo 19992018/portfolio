@@ -4,6 +4,12 @@ import { ArrowRightCircle } from "react-bootstrap-icons";
 import headerImg from "../assets/img/header-img.svg";
 import 'animate.css';
 import TrackVisibility from 'react-on-screen';
+import { HashLink } from 'react-router-hash-link';
+import {
+    BrowserRouter as Router
+  } from "react-router-dom";
+  
+
 
 export const Banner = () => {
     const [loopNum, setLoopNum] = useState(0);
@@ -44,6 +50,7 @@ export const Banner = () => {
     }
 
     return(
+        <Router>
         <section className="banner" id="home">
             <Container>
                 <Row className="align-items-center"> 
@@ -55,7 +62,9 @@ export const Banner = () => {
                         <span className="tagline">Welcome to my portfolio</span>
                         <h1>{`Hi I'm Margret; a `}<span className="wrap">{text}</span></h1>
                         <p>I am a certified and passionate web developer. I studied Law at the University of Nairobi as well as mobile-app development at strathmore. Wouldn't like to come across as a Jack of all trades but hey, I'm also gifted in song-writing.</p>
+                        <HashLink to='#connect'>
                         <button onClick={() => {console.log('connect')}}>Let's Connect <ArrowRightCircle size={25}/></button>
+                        </HashLink>
                         </div>}
                     </TrackVisibility>
                     </Col>
@@ -66,5 +75,6 @@ export const Banner = () => {
                 </Row>
             </Container>
         </section>
+        </Router>
     )
 }
