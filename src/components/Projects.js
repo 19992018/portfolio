@@ -69,15 +69,13 @@ export const Projects = () => {
                             <Tab.Container id='projects-tabs' defaultActiveKey='first'>
                             <Nav variant="pills" className="nav-pills mb-5 justify-content-center align-items-center" id="pills-tab">
                             <Nav.Item>
-                                <Nav.Link eventKey="first">Favourites</Nav.Link>
+                                <Nav.Link eventKey="first">Projects</Nav.Link>
                             </Nav.Item>
                             <Nav.Item>
-                                <Nav.Link eventKey="second">Top Picks</Nav.Link>
+                                <Nav.Link eventKey="second">github</Nav.Link>
                             </Nav.Item>
                             <Nav.Item>
-                                <Nav.Link eventKey="third">
-                                Other
-                                </Nav.Link>
+                                <Nav.Link eventKey="third">Latest</Nav.Link>
                             </Nav.Item>
                             </Nav>
                             <Tab.Content>
@@ -97,8 +95,14 @@ export const Projects = () => {
                                         }
                                     </Row>
                                 </Tab.Pane>
-                                <Tab.Pane eventKey='second'>Lorem Ipsum</Tab.Pane>
-                                <Tab.Pane eventKey='third'>Lorem Ipsum</Tab.Pane>
+                                <Tab.Pane eventKey='second'>
+                                        <p>To see the code visit my github:</p>
+                                        <p>Click <a href="https://github.com/19992018">here</a> to visit.</p>
+                                </Tab.Pane>
+                                <Tab.Pane eventKey='third'>
+                                        <p>To see my latest projects:</p>
+                                        <p>Follow my socials or <a href="https://github.com/19992018">github</a></p>
+                                </Tab.Pane>
                             </Tab.Content>
                             </Tab.Container>
                             </div> }

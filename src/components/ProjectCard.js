@@ -5,14 +5,15 @@ export const ProjectCard = ({title, description, imgUrl, websiteLink}) => {
 
     return(
         <Col sm={6} md={4}>
-
-        <div className="proj-imgbx" onClick={(e) => {e.preventDefault(); window.location.replace(websiteLink)}} >
+        <a href={websiteLink} target="_blank" className="a-text">
+        <div className="proj-imgbx">
             <img src={imgUrl} />
-            <div className="proj-txtx" onClick={(e) => {e.preventDefault(); window.location.replace(websiteLink)}}>
+            <div className="proj-txtx">
                 <h4>{title}</h4>
                 <span>{description}</span>
             </div>
         </div>
+        </a>
         </Col>
     )
 }

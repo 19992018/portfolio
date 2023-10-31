@@ -11,8 +11,8 @@ import { Footer } from './components/Footer'
 
 function App() {
   return (
-    <div className="App">
-      <NavBar />
+    <div className="App"> 
+      <NavBar /> 
       <Banner />
       <Skills />
       <Projects />
@@ -26,3 +26,4 @@ export default App;
 
 //From 1:09:02 
 //Vercel 
+//React JS Percentage Circle.

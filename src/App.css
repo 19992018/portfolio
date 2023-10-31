@@ -334,6 +334,12 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   margin: 0 auto;
   position: relative;
 }
+.skill-slider .item {
+  padding: 5% 25%;
+}
+.skill-slider .item h5{
+  padding: 15px;
+}
 .skill-slider .item img {
   width: 50%;
   margin: 0 auto 15px auto;
@@ -347,6 +353,10 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 }
 
 /************ Projects Css ************/
+
+a.a-text{
+  color: #fff;
+}
 .project {
   padding: 80px 20px;
   position: relative;
@@ -437,6 +447,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 }
 .proj-imgbx:hover::before {
   height: 100%;
+
 }
 .proj-txtx {
   position: absolute;
@@ -476,7 +487,9 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 /************ Projects Css ************/
 .contact {
   background: linear-gradient(90.21deg, #AA367C -5.91%, #4A2FBD 111.58%);
-  padding: 60px 20px;
+  /* padding: 60px 20px; */
+  padding: 60px 0 200px 0;
+
 }
 .contact img {
   width: 92%;
@@ -547,7 +560,9 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 
 /************ Footer Css ************/
 .footer {
-  padding: 50px 20px;
+  /* padding: 50px 20px; */
+  padding: 0 0 50px 0;
+
   background-image: url('./assets/img/footer-bg.png');
   background-position: center center;
   background-size: cover;
@@ -624,6 +639,86 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   margin-top: 20px;
 }
 
-@media (max-width:550px) {
-  
+/* The percentage progress circle */
+/*
+ * react-circular-progressbar styles
+ * All of the styles in this file are configurable!
+ */
+
+ .CircularProgressbar {
+  /*
+   * This fixes an issue where the CircularProgressbar svg has
+   * 0 width inside a "display: flex" container, and thus not visible.
+   */
+  width: 100%;
+  /*
+   * This fixes a centering issue with CircularProgressbarWithChildren:
+   * https://github.com/kevinsqi/react-circular-progressbar/issues/94
+   */
+  vertical-align: middle;
+}
+
+.CircularProgressbar .CircularProgressbar-path {
+  stroke: #3e98c7;
+  stroke-linecap: round;
+  transition: stroke-dashoffset 0.5s ease 0s;
+}
+
+.CircularProgressbar .CircularProgressbar-trail {
+  stroke: #d6d6d6;
+  /* Used when trail is not full diameter, i.e. when props.circleRatio is set */
+  stroke-linecap: round;
+}
+
+.CircularProgressbar .CircularProgressbar-text {
+  fill: #3e98c7;
+  font-size: 20px;
+  dominant-baseline: middle;
+  text-anchor: middle;
+}
+
+.CircularProgressbar .CircularProgressbar-background {
+  fill: #d6d6d6;
+}
+
+/*
+ * Sample background styles. Use these with e.g.:
+ *
+ *   <CircularProgressbar
+ *     className="CircularProgressbar-inverted"
+ *     background
+ *     percentage={50}
+ *   />
+ */
+.CircularProgressbar.CircularProgressbar-inverted .CircularProgressbar-background {
+  fill: #3e98c7;
+}
+
+.CircularProgressbar.CircularProgressbar-inverted .CircularProgressbar-text {
+  fill: #fff;
+}
+
+.CircularProgressbar.CircularProgressbar-inverted .CircularProgressbar-path {
+  stroke: #fff;
+}
+
+.CircularProgressbar.CircularProgressbar-inverted .CircularProgressbar-trail {
+  stroke: transparent;
+}
+
+@media (max-width: 550px) {
+
+  .contact {
+    padding: 60px 20px 200px 20px;
+}
+.newsletter-bx {
+  padding: 50px;
+  }
+
+}
+
+@media (max-width: 480px) {
+  .new-email-bx button {
+    padding: 20px;
+}
 }
