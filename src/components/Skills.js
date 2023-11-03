@@ -54,22 +54,22 @@ export const Skills = () => {
                         </div> */}
                         <div className='item'>
                         <CircularProgressbar value={percentage} text={`${percentage}%`} />
-                        <h5>Frontend web-dev</h5>
+                        <h5>Frontend <br/> web-dev</h5>
                         </div>
 
                         <div className='item'>
                         <CircularProgressbar value={percentage1} text={`${percentage1}%`} />
-                        <h5>Backend web-dev</h5>
+                        <h5>Backend <br/>web-dev</h5>
                         </div>
 
                         <div className='item'>
                         <CircularProgressbar value={percentage2} text={`${percentage2}%`} />
-                        <h5>Mobile App Dev</h5>
+                        <h5>Mobile  <br/>App Dev</h5>
                         </div>
 
                         <div className='item'>
                         <CircularProgressbar value={percentage3} text={`${percentage3}%`} />
-                        <h5>SM Marketing</h5>
+                        <h5>SM <br/>Marketing</h5>
                         </div>
 
                         {/* <div className='item'>

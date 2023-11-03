@@ -60,6 +60,7 @@ export const Banner = () => {
                     {({ isVisible }) =>
                         <div className="animate__animated animate__fadeIn">
                         <span className="tagline">Welcome to my portfolio</span>
+                        {/* <h1>{`Hi I'm Margret; a `}<br/> <div className="one-line"><span className="wrap">{text}</span></div></h1> */}
                         <h1>{`Hi I'm Margret; a `}<span className="wrap">{text}</span></h1>
                         <p>I am a certified and passionate web developer. I studied Law at the University of Nairobi as well as mobile-app development at strathmore. Wouldn't like to come across as a Jack of all trades but hey, I'm also gifted in song-writing.</p>
                         <HashLink to='#connect'>

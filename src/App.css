@@ -305,6 +305,13 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 .txt-rotate > .wrap {
   border-right: 0.08em solid #666;
 }
+div.one-line{
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  z-index: 10;
+  
+}
 
 /************ Skills Css ************/
 .skill {
@@ -339,6 +346,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 }
 .skill-slider .item h5{
   padding: 15px;
+  font-size: 15px;
 }
 .skill-slider .item img {
   width: 50%;
